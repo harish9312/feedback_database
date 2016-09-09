@@ -1,18 +1,17 @@
-//User Domain Class for Registred User
-package com.feedback_database
+package feedback_database
 
 class User {
-
     String name
-	String username
+    String userName
     String password
-	
+
 
     static constraints = {
 
         name blank: false
-        username unique: true , blank: false
+        userName unique: true , blank: false
         password blank : false
 
     }
+
 }

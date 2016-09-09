@@ -1,7 +1,7 @@
-//Feedback Domain Class To Create Columns for the feedback table
-package com.feedback_database
+package feedback_database
 
 class Feedback {
+
 
     String courseName
     String instituteName
@@ -9,7 +9,7 @@ class Feedback {
     String courseDuration
     String totalFees
     String feedback
-    String username //to fetch the feedback data of the user who is currently logged in
+    String userName //to fetch the feedback data of the user who is currently logged in
 
     static constraints = {
 
@@ -24,4 +24,5 @@ class Feedback {
 
         feedback column: "feedback" , sqlType : "varchar(1000)"
     }
+
 }

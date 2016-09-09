@@ -1,4 +1,4 @@
-package com.feedback_database
+package feedback_database
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
@@ -6,8 +6,8 @@ import spock.lang.Specification
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
-@TestFor(User)
-class UserSpec extends Specification {
+@TestFor(Feedback)
+class FeedbackSpec extends Specification {
 
     def setup() {
     }
