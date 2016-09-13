@@ -4,6 +4,7 @@ class LoginController {
 
     String username //to access in both the actions login and update
     String msg
+    def feedback //defined here to store id for the user logged in
     def index() {
        // redirect(action: "login")
     }
@@ -16,7 +17,7 @@ class LoginController {
         {
             if(user)
             {
-                username = params.username //to be used in update action
+                    username = params.username //to be used in update action
                 redirect(action: "update")
 
             }
@@ -31,25 +32,19 @@ class LoginController {
         else
                redirect(action: "index")
 
-
-
-
-
     }
 
 
-    def update()
-    {
+    def update() {
 
-	String courseName
-	String instituteName
-	String trainerName
-	String courseDuration
-	String totalFees
-	def feedback
+        String courseName
+        String instituteName
+        String trainerName
+        String courseDuration
+        String totalFees
+        String fb
 
-        if(username!=null)
-        {
+        if (username != null) {
             feedback = Feedback.findByUserName(username)
 
             courseName = feedback.courseName
@@ -57,17 +52,36 @@ class LoginController {
             trainerName = feedback.trainerName
             courseDuration = feedback.courseDuration
             totalFees = feedback.totalFees
-            feedback = feedback.feedback
+            fb = feedback.feedback
 
-            def sendData = [courseName:courseName , instituteName : instituteName ,trainerName : trainerName , courseDuration: courseDuration , totalFees : totalFees, feedback :feedback ]
-            println(sendData)
-            [sendData :sendData]
+            def sendData = [courseName: courseName, instituteName: instituteName, trainerName: trainerName, courseDuration: courseDuration, totalFees: totalFees, feedback: fb]
+           println(feedback)
+            [sendData: sendData]
 
+        } else {
+            redirect(action: "index")
+        }
+    }
+
+
+    def updateData()
+    {   
+        feedback.courseName = params.courseName
+        feedback.instituteName = params.instituteName
+        feedback.trainerName = params.trainerName
+        feedback.courseDuration = params.courseDuration
+        feedback.totalFees = params.totalFees
+        feedback.feedback = params.feedback
+        if(feedback.save())
+        {
+        redirect(controller:"feedback" , action: "index")
         }
         else
         {
-            redirect(action: "index")
+
+        render("DD")
         }
+
     }
 
 
