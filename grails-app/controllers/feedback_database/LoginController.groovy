@@ -55,7 +55,7 @@ class LoginController {
             fb = feedback.feedback
 
             def sendData = [courseName: courseName, instituteName: instituteName, trainerName: trainerName, courseDuration: courseDuration, totalFees: totalFees, feedback: fb]
-           println(feedback)
+         
             [sendData: sendData]
 
         } else {
