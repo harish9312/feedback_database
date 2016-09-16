@@ -21,6 +21,7 @@ width:300px;
 </head>
 <br>
 <body>
+<h1>${msg}</h1>
 <br>
 <div class="container">
 <g:form action="addUser">
@@ -44,7 +45,7 @@ width:300px;
 </td>
 <td>
 <br>                    
-<g:textField required="true" class="form-control" name="username" placeholder="Enter New Username"/></p><br>
+<g:textField required="true" class="form-control" name="userName" placeholder="Enter New Username"/></p><br>
 </td>
 </tr>
 <tr align="right">
@@ -53,7 +54,7 @@ width:300px;
 </td>
 <td>
 <br>                    
-<g:textField required="true" class="form-control" name="password" placeholder="Enter New Password"/></p><br>
+<g:passwordField required="true" class="form-control" name="password" placeholder="Enter New Password"/></p><br>
 </td>
 </tr>
 </table>

@@ -18,6 +18,7 @@ class Feedback {
         trainerName blank: false   , nullable: false
         courseDuration blank: false , nullable: false
         totalFees blank: false , nullable: false
+        userName unique:true
     }
 
     static mapping = {

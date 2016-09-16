@@ -46,17 +46,23 @@ class LoginController {
 
         if (username != null) {
             feedback = Feedback.findByUserName(username)
+            if(feedback!=null)
+            {
+                courseName = feedback.courseName
+                instituteName = feedback.instituteName
+                trainerName = feedback.trainerName
+                courseDuration = feedback.courseDuration
+                totalFees = feedback.totalFees
+                fb = feedback.feedback
 
-            courseName = feedback.courseName
-            instituteName = feedback.instituteName
-            trainerName = feedback.trainerName
-            courseDuration = feedback.courseDuration
-            totalFees = feedback.totalFees
-            fb = feedback.feedback
+                def sendData = [courseName: courseName, instituteName: instituteName, trainerName: trainerName, courseDuration: courseDuration, totalFees: totalFees, feedback: fb]
 
-            def sendData = [courseName: courseName, instituteName: instituteName, trainerName: trainerName, courseDuration: courseDuration, totalFees: totalFees, feedback: fb]
-         
-            [sendData: sendData]
+                [sendData: sendData]
+            }
+            else
+            {
+               // redirect(controller: "register", action: "addFeedback")
+            }
 
         } else {
             redirect(action: "index")
@@ -78,8 +84,8 @@ class LoginController {
         }
         else
         {
-
-        render("DD")
+        redirect(action: "index")	
+        
         }
 
     }
