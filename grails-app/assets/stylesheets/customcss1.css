@@ -1,0 +1,46 @@
+fieldset.scheduler-border {
+    border: 3px groove #ddd !important;
+    box-shadow:0 0 10px #999;
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+legend.scheduler-border {
+    font-size: 1.5em !important;
+    text-align: center !important;
+    border:none;
+    width:350px;
+
+}
+
+table {
+    border-collapse:separate;
+    border: 2px;
+    border-radius:10px;
+	box-shadow:0 0 10px #000000;
+	font-size: 1.2em;
+	font-family: 'Times New Roman';
+    -moz-border-radius:10px;
+}
+
+td, th {
+	border-radius: 1px;
+	border:0.6px;
+
+}
+
+th {
+    background-color: #663399;
+    color: white;
+    text-align: center;
+}
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 40px;
+    height: 50px;
+    padding-left: 10px;
+    font-size:15px;
+    font-family:Monotype Corsiva;
+}	
+
+
