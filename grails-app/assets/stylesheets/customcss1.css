@@ -1,17 +1,3 @@
-fieldset.scheduler-border {
-    border: 3px groove #ddd !important;
-    box-shadow:0 0 10px #999;
-    padding-top: 50px; 
-    padding-bottom: 50px;
-}
-
-legend.scheduler-border {
-    font-size: 1.5em !important;
-    text-align: center !important;
-    border:none;
-    width:350px;
-
-}
 
 table {
     border-collapse:separate;
@@ -23,9 +9,10 @@ table {
     -moz-border-radius:10px;
 }
 
-td, th {
+td{
 	border-radius: 1px;
 	border:0.6px;
+ 
 
 }
 
@@ -34,13 +21,16 @@ th {
     color: white;
     text-align: center;
 }
-.navbar-brand,
+.navbar-brand
+{
+    font-size:10px;
+
+}
 .navbar-nav li a {
-    line-height: 40px;
+    line-height: 20px;
     height: 50px;
     padding-left: 10px;
-    font-size:15px;
-    font-family:Monotype Corsiva;
+    font-size:18px;
 }	
 
 

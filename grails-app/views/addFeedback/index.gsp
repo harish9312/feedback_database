@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Add New Feedback</title>
+    <title>Add New Feedback</title>
     <asset:stylesheet src="bootstrap.css"/>
     <asset:stylesheet src="customcss2.css"/>
-    <asset:javascript src="angular.min.js"/>
-    <asset:javascript src="validation.js"/> 
- 
+    <asset:javascript src="angular.min.js"/> 
+    <asset:javascript src="jquery.js"/> 
+    <asset:javascript src="bootstrap.js"/>	
 </head>
 
 <body  ng-app="feedbackDatabaseApp">
-  <nav class="navbar navbar-default" style="background-color:#330066">
-	<div class="navbar-brand" style="color:#FFFFFF">
-	  Feedback Database
-    </div>
+
+<nav class="navbar navbar-default" style="background-color:#330066">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="color:#FFFFFF" font-size="10" href="#">
+Feedback Database</a>
+</div>
 <div id="navbar" class="navbar-collapse collapse">          
             
 <ul class="nav navbar-nav navbar-right" >
@@ -24,12 +33,15 @@
         </div><!--/.container-fluid -->
       </nav>
 
-<div class="custom">
-<div class="container">
+</div>
+
 <font size="3">
-<g:form name="feedbackForm" onsubmit="return validateInput()" controller="addFeedback" action="saveFeedback">
-<fieldset class="scheduler-border">
+<g:form  controller="addFeedback" action="saveFeedback">
+<table align="center" width="70%">
+<tr><td>
+<fieldset class="newborder">
 <h2 align="center">Add Your Feedback</h2>
+<br>
 <table  align="center" class="col-lg-11">
 <tr><td>Course Name:</td><td>      <g:textField required="true" class="form-control" name="courseName"/></td></tr>
 <tr><td>Institute Name:</td><td>   <g:textField required="true" class="form-control"  name="instituteName" /></td></tr>
@@ -42,8 +54,10 @@
 </div>
 </div>
 </fieldset>
+</td></tr>
+</table>
 </g:form>
-<br><br>
+<br><br
 </body>
 <script>
 angular.module("feedbackDatabaseApp",[])

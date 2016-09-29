@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="layout" content="mylayout">
+  <asset:javascript src="angular.min.js"/> 
+    <asset:javascript src="jquery.js"/> 
+<asset:javascript src="bootstrap.js"/>	
 <asset:stylesheet src="customcss1.css"/>
 <asset:stylesheet src="bootstrap.css"/>
-<style>
-</style>
-
-
 <title>Feedbacks</title>
 </head>
-
-
-	<body>
+<body>
 <nav class="navbar navbar-default" style="background-color:#330066">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -22,7 +18,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" style="color:#FFFFFF" href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <a class="navbar-brand" style="color:#FFFFFF" href="#">
 Feedback Database</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">          
@@ -59,7 +55,5 @@ Feedback Database</a>
 </tbody>
 </g:each>
 </table>
-</fieldset>
-
 </body>
 </html>
