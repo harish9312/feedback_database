@@ -24,8 +24,8 @@ Feedback Database</a>
 <div id="navbar" class="navbar-collapse collapse">          
             
 <ul class="nav navbar-nav navbar-right" >
-		<li><g:link controller="feedback" action="index" style="color:#FFFFFF">View Feedback</g:link></li> 
-		<li><g:link controller="addFeedback" action="index" style="color:#FFFFFF">Add Feedback</g:link></li> 
+		<li><g:link controller="register" action="index" style="color:#FFFFFF">SignUp Here</g:link></li> 
+		<li><g:link controller="login" action="index" style="color:#FFFFFF">Update Your Feedback</g:link></li> 
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
