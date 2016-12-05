@@ -5,20 +5,22 @@ class LoginController {
     String username //to access in both the actions login and update
     String msg
     def feedback //defined here to store id for the user logged in
-    def index() {
+    
+def index() {
         // redirect(action: "login")
     }
 
     def login() {
-
+	
+	
         def user=User.findByUserNameAndPassword(params.username , params.password)
-        println(params)
+        
         if(params.username!=null && params.password!=null)
         {
             if(user)
             {
                 username = params.username //to be used in update action
-                println(username)
+                
                 redirect(action: "update")
 
             }
@@ -37,15 +39,21 @@ class LoginController {
 
 
     def update() {
-
+	      		
+        feedback = Feedback.findByUserName(username)
+	
+	
+	if(feedback!=null){
+	
         String courseName
         String instituteName
         String trainerName
         String courseDuration
         String totalFees
         String fb
-        println(username)
-        if (username != null) 
+        
+	
+	if (username != null) 
 	     {
             feedback = Feedback.findByUserName(username)
             if(feedback!=null)
@@ -56,30 +64,44 @@ class LoginController {
                 courseDuration = feedback.courseDuration
                 totalFees = feedback.totalFees
                 fb = feedback.feedback
-
-                def sendData = [courseName: courseName, instituteName: instituteName, trainerName: trainerName, courseDuration: courseDuration, totalFees: totalFees, feedback: fb]
-
+		
+		
+                def sendData = [courseName: courseName, instituteName: instituteName, trainerName: trainerName, courseDuration: courseDuration, 			        totalFees: totalFees, feedback: fb]
+		
                 [sendData: sendData]
-            }
+
+
+
+            }//2nd If Close
             
-          }  
+          }//1st If close 
 
         else 
             redirect(action: "index")
+
+	}
+	else{
+	def user = username
+
+	redirect(controller:"login" , action:"addFeedback")
+
+	}
     
     }//def close
+
+
+
+
     def updateData()
     {
-        println(username)
-        feedback = Feedback.findByUserName(username)
 
+        feedback = Feedback.findByUserName(username)
         feedback.courseName = params.courseName
         feedback.instituteName = params.instituteName
         feedback.trainerName = params.trainerName
         feedback.courseDuration = params.courseDuration
         feedback.totalFees = params.totalFees
         feedback.feedback = params.fb
-        println(feedback)
         if(feedback.save())
         {
             redirect(controller:"feedback" , action: "index")
@@ -90,4 +112,40 @@ class LoginController {
         }
 
     }
+
+    def deleteFeedback(){
+	
+	def del = Feedback.findByUserName(username)
+	if(del.delete())
+	{
+		render("Deleted")
+	}
+	else
+	{
+		redirect(controller:"login" , action:"addFeedback")	
+	}
+
+   }
+
+
+    def addFeedback(){
+        //passing the username to the view of addFeedback so the username must be inserted in the User table
+      def loggedUser = [username:username]
+	                 [loggedUser:loggedUser]
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

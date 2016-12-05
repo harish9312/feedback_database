@@ -43,7 +43,7 @@ Feedback Database</a>
 <h2 align="center">Add Your Feedback</h2>
 <br>
 <table  align="center" class="col-lg-11">
-<p hidden="true">User Name:      <g:textField required="true" class="form-control"  name="userName" value="${loggedUser.user}"/></p>
+<p hidden="true">User Name:      <g:textField required="true" class="form-control"  name="userName" value="${loggedUser.username}"/></p>
 <tr><td>Course Name:</td><td>      <g:textField required="true" class="form-control" name="courseName"/></td></tr>
 <tr><td>Institute Name:</td><td>   <g:textField required="true" class="form-control"  name="instituteName" /></td></tr>
 <tr><td>Trainer Name:</td><td>     <g:textField required="true" class="form-control"  name="trainerName" /></td></tr>

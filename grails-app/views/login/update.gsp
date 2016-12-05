@@ -26,8 +26,9 @@ Feedback Database</a>
 <div id="navbar" class="navbar-collapse collapse">          
             
 <ul class="nav navbar-nav navbar-right" >
-		<li><g:link controller="feedback" action="index" style="color:#FFFFFF">View Feedback</g:link></li> 
+		<li><g:link controller="login" action="deleteFeedback" style="color:#FFFFFF">Delete Your Feedback</g:link></li> 
 		<li><g:link controller="logout" action="index" style="color:#FFFFFF">Logout</g:link></li> 
+
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -44,11 +45,11 @@ Feedback Database</a>
 <h2 align="center">Edit Your Feedback</h2>
 <br>
 <table  align="center" class="col-lg-11">
-<tr><td>Course Name:</td><td>      <g:textField required="true" value="${sendData.courseName}"    class="form-control" name="courseName"/></td></tr>
+<tr><td>Course Name:</td><td>      <g:textField required="true"   value="${sendData.courseName}"  class="form-control"  name="courseName"/></td></tr>
 <tr><td>Institute Name:</td><td>   <g:textField required="true" value="${sendData.instituteName}"  class="form-control"  name="instituteName" /></td></tr>
 <tr><td>Trainer Name:</td><td>     <g:textField required="true" value="${sendData.trainerName}" class="form-control"  name="trainerName" /></td></tr>
-<tr><td>Course Duration:</td><td>  <g:textField required="true" value="${sendData.courseDuration}"  class="form-control"  name="courseDuration" /></td></tr>
-<tr><td>Total Fees:</td><td>       <g:textField required="true" value="${sendData.totalFees}"  class="form-control"  name="totalFees" /></td></tr>
+<tr><td>Course Duration:</td><td>  <g:textField required="true"  value="${sendData.courseDuration}" class="form-control"  name="courseDuration" /></td></tr>
+<tr><td>Total Fees:</td><td>       <g:textField required="true"  class="form-control" value="${sendData.totalFees}" name="totalFees" /></td></tr>
 <tr><td>Feedback:</td><td>        <g:textArea required="true" class="form-control" value="${sendData.feedback}" name="fb" /><br>
 </td><tr>                   
 <tr><td></td><td><g:submitButton name="login" class="btn btn-lg btn-success btn-block" value="Update Feedback" /></td></tr>
