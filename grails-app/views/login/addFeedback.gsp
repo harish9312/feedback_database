@@ -25,10 +25,9 @@ Feedback Database</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">          
             
-<ul class="nav navbar-nav navbar-right" >
+<ul class="nav navbar-nav navbar-right" >    
 		<li><g:link controller="logout" action="index" style="color:#FFFFFF">Logout</g:link></li> 
-		<li><g:link controller="addFeedback" action="index" style="color:#FFFFFF">Add Feedback</g:link></li> 
-            </ul>
+		        </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
@@ -49,7 +48,7 @@ Feedback Database</a>
 <tr><td>Trainer Name:</td><td>     <g:textField required="true" class="form-control"  name="trainerName" /></td></tr>
 <tr><td>Course Duration:</td><td>  <g:textField required="true" class="form-control"  name="courseDuration" /></td></tr>
 <tr><td>Total Fees:</td><td>       <g:textField required="true" class="form-control"  name="totalFees" /></td></tr>
-<tr><td>Feedback:  </td><td>       <g:textArea required="true" class="form-control" ng-model="text" ng-trim="false" name="feedback" /><p align="right">{{1000-text.length+" Characters Left"}}</p></td><tr>                   
+<tr><td>Feedback:  </td><td>       <g:textArea required="true" class="form-control" ng-model="text" maxlength="1000" ng-trim="false" name="feedback" /><p align="right">{{1000-text.length+" Characters Left"}}</p></td><tr>                   
 <tr><td></td><td><g:submitButton name="login" class="btn btn-lg btn-success btn-block" value="Add Feedback" /></td></tr>
 </div>
 </div>

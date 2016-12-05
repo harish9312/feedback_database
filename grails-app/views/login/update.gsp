@@ -7,6 +7,21 @@
     <asset:javascript src="angular.min.js"/> 
     <asset:javascript src="jquery.js"/> 
     <asset:javascript src="bootstrap.js"/>	
+
+<g:javascript>
+
+function confirmDelete(){
+  var x = confirm("Do You Really Want To \nDelete Your Feedback..??");
+  if(x==true){
+  return true;
+  }
+  else{
+  return false;
+  }
+}
+
+</g:javascript>
+
 </head>
 
 <body  ng-app="feedbackDatabaseApp">
@@ -26,7 +41,7 @@ Feedback Database</a>
 <div id="navbar" class="navbar-collapse collapse">          
             
 <ul class="nav navbar-nav navbar-right" >
-		<li><g:link controller="login" action="deleteFeedback" style="color:#FFFFFF">Delete Your Feedback</g:link></li> 
+		<li><g:link controller="login" action="deleteFeedback" onclick="return confirmDelete()" style="color:#FFFFFF">Delete Your Feedback</g:link></li> 
 		<li><g:link controller="logout" action="index" style="color:#FFFFFF">Logout</g:link></li> 
 
             </ul>
