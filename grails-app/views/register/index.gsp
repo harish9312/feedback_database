@@ -54,21 +54,19 @@ Feedback Database</a>
 </div>
 <g:form name="myForm" controller="register"  action="addUser">
 
-<table align="center" width="40%">
+<table align="center" width="50%">
 <tr><td>
 <fieldset class="newborder">
 <h2 align="center"><u><i>SignUp To Feedback Database</i></u></h2>
-<br>
-<br>
-<table align="center" class="col-lg-11">
-<tr><td>Enter Your Name:</td><td><g:textField required="true" class="form-control" name="name" placeholder="Enter Your Name" value="${userInstance?.userName}"/>
-</td>
-</tr>
-<tr><td>Enter Your Username:</td><td><g:textField required="true" class="form-control" name="userName" placeholder="Enter Your Username" value="${userInstance?.userName}"/></td></tr>
 
+<p><g:if test="${params.msg!=null}">${params.msg}</g:if></p>
+<table align="center" width="270px">
 
-<tr><td>Enter New Password</td><td><g:field required="true" class="form-control" type="password" name="password" placeholder="Enter Your Password" value="${userInstance?.password}"/></td></tr>
-<tr><td></td><td><g:submitButton onclick="return validatePasswordField()" class="btn btn-lg btn-success btn-block" name="register"  value="Register Now" /></td></tr>
+<tr align="center"><td><label>Username</label><g:textField required="true" class="form-control" name="userName" placeholder="Enter Your Username" value="${userInstance?.userName}"/>
+</td></tr>
+<tr align="center"><td><label>Full Name</label><g:textField required="true" class="form-control" name="name" placeholder="Enter Your Name" value="${userInstance?.userName}"/></td></tr>
+<tr align="center"><td><label>Password</label><g:field required="true" class="form-control" type="password" name="password" placeholder="Enter Your Password" value="${userInstance?.password}"/></td></tr>
+<tr align="center"><td><g:submitButton onclick="return validatePasswordField()" class="btn btn-lg btn-success btn-block" name="register"  value="Register Now" /></td></tr>
 </g:form>
 </table>
 </div>

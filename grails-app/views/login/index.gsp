@@ -35,20 +35,25 @@ Feedback Database</a>
       </nav>
 
 </div>
+<center>
 <g:form action="login">
 
-<table align="center" width="40%">
+<table align="center" width="50%">
 <tr><td>
 <fieldset class="newborder">
-<h2 align="center"><u><i>Login To Feedback Database</i></u></h2>
+<h2 align="center">Login To Feedback Database</h2>
 <br>
 <br>
-<table align="center" class="col-lg-11">
-<tr><td>Username:</td><td><g:textField required="true" class="form-control" name="username" placeholder="Enter Your Username" value="${userInstance?.userName}"/></td></tr>
-<tr><td>Password</td><td><g:field required="true" class="form-control" type="password" name="password" placeholder="Enter Your Password" value="${userInstance?.password}"/></td></tr>
-<tr><td></td><td><g:submitButton class="btn btn-lg btn-success btn-block" name="login"  value="Login" /> </td></tr>
-
-
+<p><g:if test="${params.msg!=null}">${params.msg}</g:if></p>
+<table align="center" width="270px">
+<tr align="center"><td><label>Username</label>
+<g:textField required="true" class="form-control" name="username" placeholder="Enter Your Username" value="${userInstance?.userName}"/></td></tr>
+<tr align="center"><td><label>Password</label>
+<g:field required="true" class="form-control" type="password" name="password" placeholder="Enter Your Password" value="${userInstance?.password}"/>
+</td></tr>
+<tr align="center"><td>
+<g:submitButton class="btn btn-lg btn-success btn-block" name="login"  value="Login" /> 
+</td></tr>
 </g:form>
 </table>
 </div>

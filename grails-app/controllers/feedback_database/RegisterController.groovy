@@ -11,7 +11,7 @@ class RegisterController {
     //to add a new user into the feedback database
     def addUser()
     {   //to print the msg when an error occurs
-        def msg="Sorry Please try Again"
+        def msg="Username not Available or Already Used"
         //to be used in the addFeedback action
         user = params.userName
         def add = new User(params)
@@ -22,7 +22,7 @@ class RegisterController {
         }
         else
         {
-            redirect(action:"index" )
+            redirect(action:"index", params:[msg:msg])
 
         }
     }

@@ -3,7 +3,7 @@ package feedback_database
 class LoginController {
 
     String username //to access in both the actions login and update
-    String msg
+    String msg="Wrong Username or Password"
     def feedback //defined here to store id for the user logged in
     
 def index() {
@@ -27,7 +27,7 @@ def index() {
             else
             {
                 //if user not exist
-                redirect(action : "index" ,model:[msg:msg])
+                redirect(action : "index" ,params:[msg:msg])
             }
 
         }
