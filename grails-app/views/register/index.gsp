@@ -19,9 +19,6 @@ function validatePasswordField(){
         return true
     }
 }
-
-
-
 </g:javascript>
 
 
@@ -29,7 +26,7 @@ function validatePasswordField(){
 
 <body  ng-app="feedbackDatabaseApp">
 
-<nav class="navbar navbar-default" style="background-color:#330066">
+<nav class="navbar navbar-default" style="background-color:#9900CC">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,12 +35,13 @@ function validatePasswordField(){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" style="color:#FFFFFF" font-size="10">
+            <a href="../" class="navbar-brand" style="color:#FFFFFF" font-size="10">
 Feedback Database</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">
 
 <ul class="nav navbar-nav navbar-right" >
+
 		<li><g:link controller="feedback" action="index" style="color:#FFFFFF">View Feedback</g:link></li>
 <li><g:link controller="login" action="index" style="color:#FFFFFF">Update Your Feedback</g:link></li> 
             </ul>
@@ -57,16 +55,16 @@ Feedback Database</a>
 <table align="center" width="50%">
 <tr><td>
 <fieldset class="newborder">
-<h2 align="center"><u><i>SignUp To Feedback Database</i></u></h2>
+<h2 align="center">SignUp To Feedback Database</h2>
 
 <p><g:if test="${params.msg!=null}">${params.msg}</g:if></p>
 <table align="center" width="270px">
 
 <tr align="center"><td><label>Username</label><g:textField required="true" class="form-control" name="userName" placeholder="Enter Your Username" value="${userInstance?.userName}"/>
 </td></tr>
-<tr align="center"><td><label>Full Name</label><g:textField required="true" class="form-control" name="name" placeholder="Enter Your Name" value="${userInstance?.userName}"/></td></tr>
+<tr align="center"><td><label>Full Name</label><g:textField required="true" class="form-control" name="fullName" placeholder="Enter Your Name" value="${userInstance?.userName}"/></td></tr>
 <tr align="center"><td><label>Password</label><g:field required="true" class="form-control" type="password" name="password" placeholder="Enter Your Password" value="${userInstance?.password}"/></td></tr>
-<tr align="center"><td><g:submitButton onclick="return validatePasswordField()" class="btn btn-lg btn-success btn-block" name="register"  value="Register Now" /></td></tr>
+<tr align="center"><td><g:submitButton onclick="return validatePasswordField()" class="btn btn-lg btn-success-singup btn-block" name="register"  value="Register Now" /></td></tr>
 </g:form>
 </table>
 </div>

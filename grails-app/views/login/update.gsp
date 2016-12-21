@@ -26,7 +26,7 @@ function confirmDelete(){
 
 <body  ng-app="feedbackDatabaseApp">
 
-<nav class="navbar navbar-default" style="background-color:#330066">
+<nav class="navbar navbar-default" style="background-color:#CC33CC">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,14 +35,14 @@ function confirmDelete(){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" style="color:#FFFFFF" font-size="10" href="#">
+            <a href="../" class="navbar-brand" style="color:#FFFFFF" font-size="10">
 Feedback Database</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">          
             
 <ul class="nav navbar-nav navbar-right" >
 		<li><g:link controller="login" action="deleteFeedback" onclick="return confirmDelete()" style="color:#FFFFFF">Delete Your Feedback</g:link></li> 
-		<li><g:link controller="logout" action="index" style="color:#FFFFFF">Logout</g:link></li> 
+		<li><g:link method="POST" controller="logout" action="index" style="color:#FFFFFF">Logout</g:link></li>
 
             </ul>
           </div><!--/.nav-collapse -->

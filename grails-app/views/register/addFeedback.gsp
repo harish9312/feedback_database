@@ -11,7 +11,7 @@
 
 <body  ng-app="feedbackDatabaseApp">
 
-<nav class="navbar navbar-default" style="background-color:#330066">
+<nav class="navbar navbar-default" style="background-color:#9900CC">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,7 +20,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" style="color:#FFFFFF" font-size="10" href="#">
+            <a href="../" class="navbar-brand" style="color:#FFFFFF" font-size="10" href="#">
 Feedback Database</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">          
@@ -50,7 +50,7 @@ Feedback Database</a>
 <tr><td>Course Duration:</td><td>  <g:textField required="true" class="form-control"  name="courseDuration" /></td></tr>
 <tr><td>Total Fees:</td><td>       <g:textField required="true" class="form-control"  name="totalFees" /></td></tr>
 <tr><td>Feedback:  </td><td>       <g:textArea required="true" class="form-control" ng-model="text" ng-trim="false" maxlength="1000" name="feedback" /><p align="right">{{1000-text.length+" Characters Left"}}</p></td><tr>                   
-<tr><td></td><td><g:submitButton name="login" class="btn btn-lg btn-success btn-block" value="Add Feedback" /></td></tr>
+<tr><td></td><td><g:submitButton name="login" class="btn btn-lg btn-success-singup btn-block" value="Add Feedback" /></td></tr>
 </div>
 </div>
 </div>
